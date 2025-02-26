@@ -1,0 +1,22 @@
+void main() {
+  // Membuat array 2 dimensi dengan 4 baris
+  List<List<int>> array = List.generate(4, (i) => List.filled(0, 0));
+
+  // Baris 1: 4 bilangan kelipatan 6
+  array[0] = List.generate(4, (index) => (index + 1) * 6);
+
+  // Baris 2: 5 bilangan ganjil mulai dari 3
+  array[1] = List.generate(5, (index) => 3 + index * 2);
+
+  // Baris 3: 6 bilangan pangkat tiga dari bilangan asli mulai dari 4
+  array[2] = List.generate(6, (index) => (4 + index) * (4 + index) * (4 + index));
+
+  // Baris 4: 7 bilangan asli berurutan beda 7 mulai dari 3
+  array[3] = List.generate(7, (index) => 3 + index * 7);
+
+  // Output hasil array
+  print("Isi List:");
+  array.forEach((row) {
+    print(row.join(' '));
+  });
+}
